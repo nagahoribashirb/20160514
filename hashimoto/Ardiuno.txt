@@ -1,0 +1,28 @@
+dinoのIDEをインストール
+https://www.arduino.cc/en/Main/Software
+
+端末で以下のコマンド
+sudo gem install dino
+cd ~/Program
+dino generate-sketch serial
+フォルダduが作られる
+
+dinoのIDEを起動
+ボードにLEDを刺しておく(GNDと13番)
+USBケーブルでボードをつなぐ
+Tools/BoardでArdiuno/Genuino Unoを選択
+Tools/Portで/dev/cu.usbmodem1411(Ardiuno/Genuino Uno)を選択
+
+上記のフォルダduの中のdu.inoを開く
+コンパイルボタン押下
+アップロードボタン押下
+
+pryで動作確認
+端末でpry
+
+pry) require "dino"
+pry) board = Dino::Board.new(Dino::TxRx.new)
+pry) led = Dino::Components::Led.new(pin: 13, board: board)
+pry) led.send :on
+pry) led.send :off
+
