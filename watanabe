@@ -1,1 +1,9 @@
-
+Ubuntu14.04のOSインストール（CDboot)
+gitのインストール
+ apt-get install git
+androidアプリのgit登録
+ 1) GitHubにリポジトリを作成する(GitHubにログインした状態で、「New Repository」ボタンを押下) or git init
+ 2）ローカルでコードを作成とか修正とかする
+ 3) git add する
+ 4) git commit する
+ 5) git push [作ったリポジトリ]
